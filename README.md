@@ -1,77 +1,53 @@
-Azure Form JSON Generator Chatbot 🤖✨
+ 🚀 Azure Form Chatbot
 
-Overview 🚀
-The Azure Form JSON Generator Chatbot is an interactive chatbot that generates JSON structures for forms based on user input. It leverages Azure OpenAI to create structured JSON outputs dynamically, making form generation simple and efficient. 📝
+Welcome to Azure Form Chatbot! 🤖 This project leverages Azure OpenAI to generate dynamic JSON-based registration forms based on user input.
 
-Features 🌟
-- ✅ Generates dynamic form JSON based on user descriptions.
-- ✅ Powered by Azure OpenAI for intelligent form structuring.
-- ✅ Secure API key handling using `.env`.
-- ✅ User-friendly chatbot interface for easy interaction.
+ ✨ Features
 
-Technologies Used 🛠️
-- Python 🐍
-- Azure OpenAI 🌍
-- OpenAI API 🤖
-- Flask (Optional for Web UI) 🌐
-- Dotenv for Environment Variables 🔒
+- 📝 Generates structured form JSON automatically
+- 🔗 Uses Azure OpenAI API for smart responses
+- 🛠️ Built with Python & Flask
+- 🎯 Simple CLI-based interaction
 
-Setup Instructions 🏗️
-1. Clone the Repository 📂
+ 📂 Folder Structure
 
-git clone https://github.com/your-username/azure-form-chatbot.git
-cd azure-form-chatbot
+📦 azure-form-chatbot
+├── 📂 venv/                  Virtual environment
+├── 📂 static/                Static assets
+├── 📂 templates/             HTML templates (if applicable)
+├── 📄 form_chatbot.py        Main chatbot script
+├── 📄 requirements.txt       Python dependencies
+└── 📄 README.md              Project documentation
 
 
-2. Create a Virtual Environment 🌱
+ 🚀 Installation & Setup
 
-python -m venv venv
-source venv/bin/activate   On Windows use: venv\Scripts\activate
+ 🔧 Prerequisites
+- Python 3.10+
+- Azure OpenAI API Key
+- Virtual Environment (recommended)
 
-3. Install Dependencies 📦
-pip install openai python-dotenv
+ ⚙️ Setup
+sh
+ Clone the repository
+$ git clone https://github.com/your-username/azure-form-chatbot.git
+$ cd azure-form-chatbot
 
+ Create a virtual environment
+$ python -m venv venv
+$ source venv/bin/activate    On Windows: venv\Scripts\activate
 
-4. Set Up Environment Variables 🔐
-Create a `.env` file and add:
-ini
-AZURE_OPENAI_API_KEY=your_new_api_key
-AZURE_OPENAI_ENDPOINT=https://ai-genpod378939727809.openai.azure.com
-AZURE_DEPLOYMENT_NAME=your_deployment_name
-
-5. Run the Chatbot 🏃‍♂️
-python form_chatbot.py
-
-
- Usage 💬
-1. The chatbot will prompt: `Please describe the form you want to create (or type 'exit' to quit):`
-2. Enter a description like: `A registration form with name, email, and password fields.`
-3. The chatbot will generate and display the corresponding JSON structure.
-
- Example Output 📄
-json
-{
-  "form": {
-    "title": "Registration Form",
-    "fields": [
-      {"name": "Name", "type": "text", "required": true},
-      {"name": "Email", "type": "email", "required": true},
-      {"name": "Password", "type": "password", "required": true}
-    ]
-  }
-}
+ Install dependencies
+$ pip install -r requirements.txt
 
 
- Security Considerations 🔒
-- Never hardcode API keys in the script; always use environment variables.
-- Add `.env` to `.gitignore` to prevent accidental commits.
+ 🏃‍♂️ Usage
+sh
+ Run the chatbot
+$ python form_chatbot.py
 
-echo ".env" >> .gitignore
+ 📜 License
 
-Contributing 🤝
-Feel free to fork this repository, submit issues, or make pull requests 🚀
-
-License 📜
-This project is licensed under the MIT License.
+This project is licensed under the MIT License 📄
 
 
